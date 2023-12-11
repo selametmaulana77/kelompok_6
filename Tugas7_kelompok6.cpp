@@ -19,6 +19,7 @@ void tampilkanData(const Motor& kendaraan) {
     cout << "Warna: " << kendaraan.warna << endl;
     cout << "Bahan Bakar: " << kendaraan.bahanBakar << endl;
     cout << "Nomor Polisi: " << kendaraan.nomorPolisi << endl;
+    cout << "Tahun Kendaraan: " << Tahun Kendaraan << endl;
     cout << endl;
 }
 
@@ -58,6 +59,9 @@ int main() {
 
                     cout << "Nomor Polisi: ";
                     getline(cin, dataKendaraan[jumlahKendaraan].nomorPolisi);
+                    
+                    cout << "Tahun Kendaraan: ";
+                    getline(cin, dataKendaraan[jumlahKendaraan].Tahunkendaraan);
 
                     ++jumlahKendaraan;
                 } else {
