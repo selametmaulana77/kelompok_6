@@ -10,6 +10,7 @@ struct Motor {
     string warna;
     string bahanBakar;
     string nomorPolisi;
+    string tahunkendaraan;
 };
 
 // Fungsi untuk menampilkan data kendaraan
@@ -19,7 +20,7 @@ void tampilkanData(const Motor& kendaraan) {
     cout << "Warna: " << kendaraan.warna << endl;
     cout << "Bahan Bakar: " << kendaraan.bahanBakar << endl;
     cout << "Nomor Polisi: " << kendaraan.nomorPolisi << endl;
-    cout << "Tahun Kendaraan: " << Tahun Kendaraan << endl;
+    cout << "Tahun Kendaraan: " << kendaraan.tahunkendaraan << endl;
     cout << endl;
 }
 
@@ -61,7 +62,7 @@ int main() {
                     getline(cin, dataKendaraan[jumlahKendaraan].nomorPolisi);
                     
                     cout << "Tahun Kendaraan: ";
-                    getline(cin, dataKendaraan[jumlahKendaraan].Tahunkendaraan);
+                    getline(cin, dataKendaraan[jumlahKendaraan].tahunkendaraan);
 
                     ++jumlahKendaraan;
                 } else {
