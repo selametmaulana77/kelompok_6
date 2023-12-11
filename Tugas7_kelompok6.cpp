@@ -64,5 +64,35 @@ int main() {
                     cout << "Maaf, sudah mencapai batas maksimal kendaraan.\n";
                 }
                 break;
+                
+                case 2: // Tampilkan Data
+                cout << "Data Kendaraan Motor:" << endl;
+                for (int i = 0; i < jumlahKendaraan; ++i) {
+                    cout << "Kendaraan ke-" << i + 1 << ":" << endl;
+                    tampilkanData(dataKendaraan[i]);
+                }
+                break;
+
+            case 3: // Hapus Data
+                if (jumlahKendaraan > 0) {
+                    int indeksHapus;
+                    cout << "Masukkan indeks kendaraan yang akan dihapus (1 - " << jumlahKendaraan << "): ";
+                    cin >> indeksHapus;
+
+                    if (indeksHapus >= 1 && indeksHapus <= jumlahKendaraan) {
+                        // Geser elemen-elemen setelah indeksHapus ke kiri
+                        for (int i = indeksHapus - 1; i < jumlahKendaraan - 1; ++i) {
+                            dataKendaraan[i] = dataKendaraan[i + 1];
+                        }
+
+                        --jumlahKendaraan;
+                        cout << "Data kendaraan berhasil dihapus.\n";
+                    } else {
+                        cout << "Indeks tidak valid.\n";
+                    }
+                } else {
+                    cout << "Tidak ada data kendaraan untuk dihapus.\n";
+                }
+                break;
 
             
