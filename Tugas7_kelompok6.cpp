@@ -94,5 +94,50 @@ int main() {
                     cout << "Tidak ada data kendaraan untuk dihapus.\n";
                 }
                 break;
+                
+                case 4: // Update Data
+                if (jumlahKendaraan > 0) {
+                    int indeksUpdate;
+                    cout << "Masukkan indeks kendaraan yang akan diupdate (1 - " << jumlahKendaraan << "): ";
+                    cin >> indeksUpdate;
+
+                    if (indeksUpdate >= 1 && indeksUpdate <= jumlahKendaraan) {
+                        cout << "Data Kendaraan ke-" << indeksUpdate << ":" << endl;
+                        cout << "Jenis Kendaraan: ";
+                        getline(cin, dataKendaraan[indeksUpdate - 1].jenis);
+
+                        cout << "Merek/Type: ";
+                        getline(cin, dataKendaraan[indeksUpdate - 1].merek);
+
+                        cout << "Warna Kendaraan: ";
+                        getline(cin, dataKendaraan[indeksUpdate - 1].warna);
+
+                        cout << "Bahan Bakar: ";
+                        getline(cin, dataKendaraan[indeksUpdate - 1].bahanBakar);
+
+                        cout << "Nomor Polisi: ";
+                        getline(cin, dataKendaraan[indeksUpdate - 1].nomorPolisi);
+
+                        cout << "Data kendaraan berhasil diupdate.\n";
+                    } else {
+                        cout << "Indeks tidak valid.\n";
+                    }
+                } else {
+                    cout << "Tidak ada data kendaraan untuk diupdate.\n";
+                }
+                break;
+
+            case 0: // Keluar
+                cout << "Program selesai.\n";
+                return 0;
+
+            default:
+                cout << "Pilihan tidak valid. Silakan coba lagi.\n";
+                break;
+        }
+    }
+
+    return 0;
+}
 
             
