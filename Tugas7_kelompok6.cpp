@@ -122,6 +122,10 @@ int main() {
 
                         cout << "Nomor Polisi: ";
                         getline(cin, dataKendaraan[indeksUpdate - 1].nomorPolisi);
+                        
+                        cout << "Tahun Kendaraan: ";
+                        getline(cin, dataKendaraan[indeksUpdate - 1].tahunkendaraan);
+
 
                         cout << "Data kendaraan berhasil diupdate.\n";
                     } else {
